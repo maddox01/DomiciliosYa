@@ -3,7 +3,7 @@
     using System;
     using System.ComponentModel.DataAnnotations;
 
-    public class Products
+    public class Product
     {
         [Key]
         public int ProductId { get; set; }
@@ -23,5 +23,10 @@
 
         [Display(Name = "Fecha Publicación")]
         public DateTime PublishOn { get; set; }
+
+        public override string ToString()
+        {
+            return this.NameProduct;
+        }
     }
 }
